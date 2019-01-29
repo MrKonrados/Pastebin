@@ -1,0 +1,20 @@
+﻿@model Pastebin.Models.Paste
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <div>
+        <pre>
+        <code class="language-css">
+            @Html.DisplayFor(model => model.Content)
+        </code>
+        </pre>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PasteId }) |
+</p>
